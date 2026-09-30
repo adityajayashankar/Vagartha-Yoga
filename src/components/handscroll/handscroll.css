@@ -1,0 +1,459 @@
+@property --breath {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+/* Non-inheriting animated tokens avoid invalidating the whole panorama. */
+@property --sky-top {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #bda9a0;
+}
+@property --sky-bottom {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #f1e7d3;
+}
+@property --light-tint {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #d9902b;
+}
+@property --shadow-tint {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #635262;
+}
+@property --sun-y {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 35;
+}
+
+.handscroll {
+  --hs-paper: #f1e7d3;
+  --hs-turmeric: #d9902b;
+  --hs-terracotta: #b4552f;
+  --hs-moss: #6b7b4f;
+  --hs-indigo: #1e2740;
+  --hs-vermilion: #c8452b;
+  --hs-far: #b4ad8d;
+  --hs-mid: #87916d;
+  --hs-ink: #1e2740;
+  --sky-top: #bda9a0;
+  --sky-bottom: #f1e7d3;
+  --light-tint: #d9902b;
+  --shadow-tint: #635262;
+  --sun-y: 35;
+  --breath-duration: 10s;
+  --ambient-state: paused;
+  --hs-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --hs-sine: cubic-bezier(0.37, 0, 0.63, 1);
+  --hs-gutter: clamp(24px, 4.5vw, 88px);
+  --hs-header: 98px;
+  position: relative;
+  height: 500svh;
+  margin-top: calc(-1 * var(--hs-header));
+  color: var(--hs-ink);
+  background: var(--hs-paper);
+  isolation: isolate;
+}
+.handscroll[data-ambient="running"] {
+  --ambient-state: running;
+}
+.handscroll[data-fast="true"] {
+  --breath-duration: 8s;
+}
+.hs-stage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: hidden;
+  isolation: isolate;
+}
+/* Consumers start, pause and change duration on the same style update.
+   Opt a future scene element into this shared CSS clock with this class. */
+.hs-breath-clock {
+  animation: hs-breath-clock var(--breath-duration) var(--hs-sine) infinite;
+  animation-play-state: var(--ambient-state);
+}
+.hs-layer,
+.hs-cut,
+.hs-sky-paints,
+.hs-sky-paints > div,
+.hs-lighting,
+.hs-lighting > div,
+.hs-grain,
+.hs-overlay,
+.hs-static-art,
+.hs-static-cuts,
+.hs-static-ui {
+  position: absolute;
+  inset: 0;
+}
+.hs-layer {
+  height: 100%;
+  pointer-events: none;
+}
+.handscroll[data-ready="true"] .hs-layer {
+  will-change: transform;
+}
+.hs-layer-sky {
+  z-index: 0;
+}
+.hs-layer-far {
+  z-index: 1;
+}
+.hs-layer-mid {
+  z-index: 2;
+}
+.hs-track {
+  z-index: 3;
+  display: flex;
+  width: 400vw;
+}
+.hs-layer-foreground {
+  z-index: 4;
+}
+.hs-cut {
+  width: 100%;
+  height: 100%;
+}
+.hs-cut-far {
+  fill: var(--hs-far);
+}
+.hs-cut-mid {
+  fill: var(--hs-mid);
+}
+.hs-cut-near {
+  fill: var(--hs-paper);
+}
+.hs-cut-foreground {
+  fill: var(--hs-moss);
+}
+.hs-cut .hs-hard-shadow {
+  fill: var(--hs-indigo);
+  opacity: 0.16;
+}
+.hs-sun {
+  position: absolute;
+  top: 10%;
+  left: 48vw;
+  width: clamp(88px, 10vw, 160px);
+  aspect-ratio: 1;
+  transform: translateY(calc(var(--sun-y) * 1svh));
+}
+.hs-sun svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--hs-turmeric);
+}
+.hs-cloud {
+  position: absolute;
+  left: 31vw;
+  top: 30%;
+  width: clamp(120px, 20vw, 330px);
+  fill: var(--hs-paper);
+  opacity: 0.6;
+  animation: hs-cloud-drift 16s var(--hs-sine) infinite alternate;
+  animation-play-state: var(--ambient-state);
+}
+.hs-panel {
+  position: relative;
+  flex: 0 0 100vw;
+  height: 100svh;
+}
+.hs-figure-anchor {
+  position: absolute;
+  bottom: 32%;
+  left: 69%;
+  width: clamp(180px, 29svh, 340px);
+  height: 40svh;
+  transform: translateX(-50%);
+  color: var(--hs-indigo);
+}
+.hs-rig {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  visibility: hidden;
+}
+.hs-rig-breath {
+  transform: scaleY(calc(1 + var(--breath) * 0.012));
+}
+.hs-lighting {
+  z-index: 5;
+  pointer-events: none;
+}
+.hs-grain {
+  z-index: 6;
+  opacity: 0.075;
+  background-size: 64px 64px;
+  pointer-events: none;
+}
+.hs-overlay {
+  z-index: 7;
+  pointer-events: none;
+}
+.hs-time-chip {
+  position: absolute;
+  top: calc(var(--hs-header) + 30px);
+  left: var(--hs-gutter);
+  padding: 7px 12px;
+  border: 1px solid #1e274040;
+  color: var(--hs-ink);
+  background: var(--hs-paper);
+  font-size: 10px;
+  line-height: 1.5;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.hs-edition {
+  position: absolute;
+  top: calc(var(--hs-header) + 39px);
+  right: var(--hs-gutter);
+  padding: 2px 8px;
+  width: 224px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--hs-ink);
+  background: var(--hs-paper);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.hs-edition span {
+  margin-left: 16px;
+}
+.hs-copy-area {
+  position: absolute;
+  left: var(--hs-gutter);
+  bottom: 88px;
+}
+.hs-chapter-stack {
+  display: grid;
+}
+.hs-chapter-copy {
+  grid-area: 1 / 1;
+}
+.hs-word-window {
+  overflow: hidden;
+}
+.hs-word-reveal {
+  width: max-content;
+}
+.hs-word {
+  font-size: clamp(64px, 11vw, 168px);
+  line-height: 1.12;
+  letter-spacing: -0.05em;
+  padding-right: 0.06em;
+  color: var(--hs-ink);
+}
+.hs-line {
+  color: var(--hs-ink);
+  max-width: 45ch;
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: nowrap;
+  margin-top: 10px;
+}
+.hs-progress {
+  display: flex;
+  gap: 8px;
+  width: clamp(208px, 24vw, 348px);
+  margin-top: 25px;
+}
+.hs-progress-segment {
+  height: 3px;
+  flex: 1;
+  background: #1e274033;
+  overflow: hidden;
+}
+.hs-progress-segment > span {
+  display: block;
+  height: 100%;
+  background: var(--hs-ink);
+  transform-origin: left;
+}
+.hs-breath {
+  position: absolute;
+  right: var(--hs-gutter);
+  bottom: 88px;
+  width: 56px;
+  text-align: center;
+}
+.hs-ring-contract {
+  display: block;
+  width: 56px;
+  height: 56px;
+  transition: transform 200ms var(--hs-ease);
+}
+.hs-ring {
+  display: block;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--hs-ink);
+  border-radius: 50%;
+  transform: scale(calc(0.7 + var(--breath) * 0.3));
+}
+.handscroll[data-fast="true"] .hs-ring-contract {
+  transform: scale(0.72);
+}
+.hs-breath-label {
+  display: block;
+  margin-top: 12px;
+  font:
+    9px/1.7 Arial,
+    sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.hs-skip {
+  position: absolute;
+  bottom: 26px;
+  left: var(--hs-gutter);
+  min-height: 44px;
+  display: inline-flex;
+  gap: 24px;
+  align-items: center;
+  font-size: 11px;
+  text-decoration: none;
+  pointer-events: auto;
+}
+.hs-skip span {
+  font-size: 20px;
+}
+.hs-static-art,
+.hs-static-ui {
+  display: none;
+}
+
+@keyframes hs-breath-clock {
+  0%,
+  100% {
+    --breath: 0;
+  }
+  40% {
+    --breath: 1;
+  }
+}
+@keyframes hs-cloud-drift {
+  from {
+    transform: translateX(-12px);
+  }
+  to {
+    transform: translateX(18px);
+  }
+}
+@media (max-width: 900px) {
+  .handscroll {
+    --hs-header: 82px;
+  }
+}
+@media (max-width: 767px) {
+  /* Preserve the source art's proportions and crop it to a portrait window. */
+  .hs-cut {
+    width: max(100%, 400svh);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .hs-static-cuts {
+    min-width: 100svh;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .hs-layer-foreground {
+    display: none;
+  }
+  .hs-figure-anchor {
+    left: 50%;
+    height: 35svh;
+    width: 30svh;
+  }
+  .hs-edition {
+    display: none;
+  }
+  .hs-copy-area {
+    bottom: 95px;
+  }
+  .hs-line {
+    font-size: 12px;
+  }
+  .hs-progress {
+    width: 200px;
+    margin-top: 23px;
+  }
+  .hs-breath {
+    bottom: 95px;
+  }
+  .hs-breath-label {
+    font-size: 8px;
+  }
+  .hs-sun {
+    left: 50vw;
+    width: 100px;
+  }
+}
+@media (max-height: 540px) and (prefers-reduced-motion: no-preference) {
+  .hs-copy-area {
+    bottom: 60px;
+  }
+  .hs-progress {
+    margin-top: 10px;
+  }
+  .hs-breath {
+    bottom: 60px;
+  }
+  .hs-skip {
+    bottom: 7px;
+  }
+}
+@media (prefers-reduced-motion: reduce), (scripting: none) {
+  .handscroll {
+    height: auto;
+  }
+  .hs-stage {
+    position: relative;
+    height: auto;
+    animation: none;
+  }
+  .hs-layer:not(.hs-track),
+  .hs-track > .hs-cut,
+  .hs-lighting,
+  .hs-overlay {
+    display: none;
+  }
+  .hs-track {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: none !important;
+    will-change: auto !important;
+  }
+  .hs-panel {
+    width: 100%;
+    height: 100svh;
+    overflow: hidden;
+  }
+  .hs-static-art,
+  .hs-static-ui {
+    display: block;
+  }
+  .hs-static-art {
+    background: linear-gradient(var(--sky-top), var(--sky-bottom));
+  }
+  .hs-static-cuts {
+    width: 100%;
+    height: 100%;
+  }
+  .hs-rig-breath {
+    transform: none;
+  }
+  .hs-copy-area {
+    bottom: 64px;
+  }
+}

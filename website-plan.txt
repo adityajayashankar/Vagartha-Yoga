@@ -1,0 +1,1266 @@
+You are a senior creative frontend engineer, interaction designer, motion designer, art director, and premium web designer.
+
+Build a COMPLETE FRONTEND-ONLY website for:
+
+VAGARTHA YOGA
+
+IMPORTANT:
+This task is FRONTEND ONLY.
+
+Do NOT build:
+- backend
+- CMS
+- authentication
+- dashboard
+- API routes
+- payment flows
+- admin panel
+- booking backend
+- database logic
+
+This is purely a UI/UX + frontend experience.
+
+========================================================
+PRIORITY ORDER
+========================================================
+
+1. Visual quality and pixel-art consistency
+2. Emotional storytelling and transformation journey
+3. Smooth horizontal story experience controlled by vertical scroll
+4. Premium wellness brand feeling
+5. Mobile responsiveness
+6. Clear usability for services / contact / booking CTA
+7. Subtle easter egg
+8. Footer ending animation
+
+If lower-priority instructions conflict with story quality or visual cohesion, prioritize the items above.
+
+========================================================
+BRAND / SOURCE OF TRUTH
+========================================================
+
+Brand:
+Vagartha Yoga
+
+Instructor:
+Girija Jayashankar
+
+Role:
+Yoga Instructor
+
+Experience:
+20+ Years Professional Experience
+
+Primary offering:
+Personal Training
+
+Service mode:
+Online Personal Training
+
+Services:
+- Regular Yoga
+- Prenatal Yoga
+- Postnatal Yoga
+
+Regions served:
+- India
+- UAE
+- Canada
+- USA
+
+Contact:
+Phone: +91 8971297242
+Email: vagarthayoga@gmail.com
+Instagram: @yogawithgirija
+
+Additional detail:
+- PGDYT
+- trained hundreds of prenatal and postnatal individuals
+
+Tone:
+- calm
+- premium
+- warm
+- trustworthy
+- human
+- transformative
+- feminine but tasteful
+
+========================================================
+CORE CREATIVE IDEA
+========================================================
+
+Create a WEBSITE THAT FEELS LIKE A VISUAL STORY.
+
+Main concept:
+
+A tired, low-energy, disconnected person gradually transforms into a calmer, stronger, replenished version of themselves through yoga practice guided over the course of a day.
+
+This transformation should feel:
+
+- gentle
+- emotionally uplifting
+- non-judgmental
+- visually poetic
+- grounded
+- realistic
+- healing
+
+The story should happen in OPEN SPACES, not in a cramped indoor environment.
+
+Use nature, terraces, courtyards, rooftops, open pavilions, sunrise lawns, evening decks, moonlit platforms, or breezy garden spaces.
+
+The emotional arc should feel like:
+
+stagnation
+→ first breath
+→ practice
+→ rhythm
+→ release
+→ replenishment
+
+The time-of-day progression should be important.
+
+The world should evolve across:
+EARLY MORNING
+→ MORNING
+→ AFTERNOON
+→ SUNSET
+→ MIDNIGHT / MOONLIT CALM
+
+By the end, the person should feel replenished, restored, and grounded.
+
+========================================================
+MAIN STORY STRUCTURE
+========================================================
+
+Use one recurring visual storytelling device:
+
+A flowing yoga mat / ribbon-like practice path
+
+This mat/path is the main connector through the story.
+
+It can visually unroll forward as the user progresses.
+
+Optionally combine it with:
+- a breath trail
+- soft petal drift
+- ribbon of light
+- subtle energy flow
+
+This is the main recurring object connecting all scenes.
+
+The story should contain approximately 5 connected scenes:
+
+1. EARLY MORNING STILLNESS / LOW ENERGY
+2. FIRST BREATH / MORNING OPENING
+3. GUIDED PRACTICE / MIDDAY FLOW
+4. DEEPER TRANSFORMATION / SUNSET BALANCE
+5. REPLENISHED / MIDNIGHT CALM
+
+The story must feel like ONE CONTINUOUS WORLD.
+
+========================================================
+HORIZONTAL STORY MODE
+========================================================
+
+VERY IMPORTANT:
+
+The user scrolls VERTICALLY.
+
+During the main cinematic storytelling section, vertical scroll progress must control HORIZONTAL movement.
+
+Use:
+- GSAP
+- ScrollTrigger
+
+Optional:
+- Lenis
+
+Do NOT require manual horizontal wheel gestures.
+
+Do NOT build a carousel.
+
+Do NOT build 5 disconnected slides.
+
+Do NOT build giant cards arranged side-by-side.
+
+Create ONE LONG CONNECTED PIXEL-ART WORLD.
+
+The storytelling section should be pinned while the user scrolls.
+
+========================================================
+PIXEL ART REQUIREMENT
+========================================================
+
+This is a HARD visual requirement:
+
+Use HIGH-DETAIL MODERN CINEMATIC PIXEL ART for the illustrated story world.
+
+Use:
+- detailed premium pixel environments
+- elegant pixel characters
+- atmospheric depth
+- soft cinematic lighting
+- detailed natural elements
+- detailed yoga props
+- smooth modern web animation
+- small authored details everywhere
+
+Do NOT make it look like:
+- 8-bit retro game art
+- low-detail arcade sprites
+- Game Boy graphics
+- Minecraft
+- childish cartoon pixel art
+
+Think:
+high-detail modern pixel illustration
++
+soft editorial wellness design
++
+premium storytelling
++
+modern motion
+
+IMPORTANT:
+Only the illustrated story world should be pixel art.
+
+Keep:
+- UI
+- typography
+- buttons
+- forms
+- navbar
+- service cards
+- contact blocks
+
+crisp, clean, modern, and readable.
+
+The contrast should be:
+
+PIXEL STORY WORLD
++
+CLEAN MODERN UI
+
+========================================================
+VISUAL STYLE
+========================================================
+
+The site should feel:
+
+- soft
+- premium
+- elegant
+- hopeful
+- airy
+- feminine
+- restorative
+- open
+- calm
+- human
+
+Avoid:
+- generic spa template
+- cliché yoga stock design
+- glittery decoration
+- excessive floral clutter
+- childish whimsy
+- corporate wellness blandness
+
+========================================================
+COLOR SYSTEM
+========================================================
+
+Primary palette:
+
+Soft Pink
+#EFCFD3
+
+Lavender
+#CDBBEA
+
+Dusty Rose
+#DDA8B5
+
+Warm Cream
+#F8F3EE
+
+Muted Plum
+#6F5876
+
+Deep Charcoal
+#25212A
+
+Sage Accent
+#A9B9A3
+
+Sunrise Gold
+#E7C084
+
+Sky Mist
+#DDE7F1
+
+Use colors according to time of day:
+
+Early morning:
+- cool mist
+- pale lavender
+- soft cream
+
+Morning:
+- warmer pink
+- soft sunrise gold
+- sage freshness
+
+Afternoon:
+- balanced cream and soft floral tones
+
+Sunset:
+- dusty rose
+- gold
+- lavender-plum
+
+Midnight:
+- muted plum
+- charcoal
+- moonlit cream highlights
+
+========================================================
+TYPOGRAPHY
+========================================================
+
+Use elegant premium typography.
+
+Suggested direction:
+- refined serif or premium display serif for large headlines
+- clean sans-serif for body, buttons, and UI
+
+Headlines should feel:
+- graceful
+- calming
+- premium
+- strong but soft
+
+Body text should feel:
+- readable
+- human
+- concise
+- warm
+
+Avoid long generic wellness paragraphs.
+
+========================================================
+NAVBAR
+========================================================
+
+Create a floating sticky navbar.
+
+Style:
+- elegant
+- premium
+- slightly rounded
+- minimal
+- light or dark depending on contrast
+- subtle border
+- optional blur
+
+LEFT:
+Vagartha Yoga
+
+CENTER:
+About
+Services
+Experience
+Book a Free Class
+Contact
+
+RIGHT:
+Instagram ↗
+
+Primary CTA button:
+Book Free Class →
+
+Navbar must remain usable during the horizontal story.
+
+Navigation should stay conventional and clear.
+
+========================================================
+HERO SECTION
+========================================================
+
+The opening hero should establish the emotional direction immediately.
+
+IMPORTANT UPDATE:
+The person should already be in an OPEN SPACE, not a closed indoor room.
+
+Create an open early-morning practice setting.
+
+Possible environment:
+- rooftop terrace
+- open courtyard
+- balcony garden
+- sunrise lawn
+- quiet outdoor deck
+- nature-facing pavilion
+
+The person begins in a tired, low-energy, disconnected state.
+
+Visual cues:
+- slouched but not exaggerated
+- slightly stiff posture
+- sleepy / overwhelmed energy
+- yoga mat nearby but not fully opened
+- tea cup
+- phone/laptop set aside
+- dawn sky
+- still air
+- sparse initial movement
+
+The idea is:
+not broken, not dramatic — just disconnected from rhythm.
+
+Main headline options:
+Find your way back to balance.
+or
+From drained to replenished.
+or
+Breathe into a better rhythm.
+or
+A gentler path back to yourself.
+
+Pick the best one.
+
+Supporting line:
+Personal online yoga with Girija Jayashankar — helping you build strength, calm, and balance through regular, prenatal, and postnatal practice.
+
+Primary CTA:
+Book a Free Class →
+
+Secondary CTA:
+Explore the Journey ↓
+
+Trust labels:
+20+ Years Experience
+Personal Training
+Online Sessions
+India • UAE • Canada • USA
+
+========================================================
+HERO MOTION
+========================================================
+
+Initial atmosphere:
+- calm
+- slightly still
+- gentle dawn quietness
+
+Ambient details:
+- faint steam from tea
+- tiny breeze through plants
+- soft sky shift
+- subtle cloth movement
+- bird in distance
+- slight breath motion
+
+When user begins scrolling:
+- the yoga mat slowly unrolls
+- the breath-trail/ribbon begins to flow forward
+- the sky brightens slightly
+- the journey starts
+
+This transitions into the horizontal storytelling section.
+
+========================================================
+MAIN HORIZONTAL STORY
+========================================================
+
+This is the most important creative section.
+
+Create ONE long connected horizontal world.
+
+The emotional story is told through:
+- changing time of day
+- changing posture
+- changing light
+- changing environment
+- changing breath
+- changing energy
+
+The person gradually moves through open spaces as the day unfolds.
+
+Do NOT create abrupt scene cuts.
+
+Each scene should naturally transform into the next.
+
+========================================================
+SCENE 1 — EARLY MORNING STILLNESS / LOW ENERGY
+========================================================
+
+Time:
+very early morning / dawn
+
+Mood:
+stiff
+tired
+low-energy
+quiet
+disconnected
+
+Environment:
+open rooftop / terrace / courtyard at dawn
+
+Visual cues:
+- pale sky
+- soft cool tones
+- folded or half-open mat
+- seated or gently slouched posture
+- quiet tea
+- plants still
+- sparse air
+- minimal movement
+
+Headline:
+SOME DAYS,
+YOU FEEL OFF RHYTHM.
+
+Supporting copy:
+Too much stress. Too little movement. Not enough breath. Not enough pause.
+
+As the user scrolls:
+the mat/path extends forward.
+
+========================================================
+SCENE 2 — FIRST BREATH / MORNING OPENING
+========================================================
+
+Time:
+sunrise / early morning
+
+Mood:
+hope
+gentle opening
+first release
+
+Environment:
+the open space becomes brighter and more alive
+
+Elements:
+- sunlight enters
+- the body begins stretching
+- posture improves slightly
+- plants respond to breeze
+- colors become warmer
+- first guided movement begins
+
+Girija’s guidance should appear tastefully.
+
+Do NOT overuse a large instructor figure.
+
+Possible representation:
+- calm guide visible on a laptop/tablet
+- elegant pixel guide figure in the distance
+- subtle visual cue of remote instruction
+
+Headline:
+IT STARTS
+WITH ONE BREATH.
+
+Supporting idea:
+A small, guided step can begin a real shift.
+
+========================================================
+SCENE 3 — GUIDED PRACTICE / MIDDAY FLOW
+========================================================
+
+Time:
+mid-morning to afternoon
+
+This scene should communicate what Vagartha Yoga offers.
+
+The world becomes a connected practice environment.
+
+Still keep it continuous — not 3 cards.
+
+Create sub-zones within the open world representing:
+
+- Regular Yoga
+- Prenatal Yoga
+- Postnatal Yoga
+
+Possible visual structure:
+a flowing path through connected open practice spaces:
+- garden deck
+- sunlit pavilion
+- shaded courtyard
+- soft rooftop practice platform
+
+Each zone can subtly represent a service type.
+
+Headline:
+GUIDED FOR
+YOUR SEASON OF LIFE.
+
+Supporting copy:
+Personal online training designed around your body, your pace, and your needs.
+
+Sub-themes:
+
+REGULAR YOGA
+Strength, posture, mobility, calm
+
+PRENATAL YOGA
+Breath, support, comfort, mindful preparation
+
+POSTNATAL YOGA
+Recovery, reconnection, stability, strength
+
+This must feel emotionally safe and elegant.
+
+========================================================
+SCENE 4 — DEEPER TRANSFORMATION / SUNSET BALANCE
+========================================================
+
+Time:
+golden hour / sunset
+
+Mood:
+strength
+ease
+alignment
+confidence
+presence
+
+This is where the person visibly transforms.
+
+Do NOT make it a cliché before/after.
+
+Show transformation through:
+- posture
+- breath
+- expression
+- movement
+- openness
+- balance
+- environment warmth
+- color richness
+
+Environment:
+- sunset terrace / glowing courtyard / open evening deck
+- warmer tones
+- flowing practice
+- stronger poses
+- deeper sense of calm
+
+Headline:
+STRENGTH.
+CALM.
+BALANCE.
+
+Supporting copy:
+Yoga becomes more than a routine — it becomes a return to yourself.
+
+This should feel emotionally rewarding.
+
+========================================================
+SCENE 5 — REPLENISHED / MIDNIGHT CALM
+========================================================
+
+Time:
+night / moonlit late evening / near midnight
+
+IMPORTANT:
+This is NOT a dark or sad ending.
+
+This is a replenished, deeply peaceful, restored ending.
+
+Environment:
+- moonlit open terrace / rooftop / pavilion
+- calm sky
+- soft lantern glow
+- moonlight
+- neatly rolled mat
+- calm tea moment
+- open air
+- subtle stars if tasteful
+- gentle plants
+- stillness with life
+
+The person now feels:
+- replenished
+- restored
+- clear
+- grounded
+- lighter
+- quietly strong
+
+Headline:
+REPLENISHED.
+ROOTED.
+AT EASE.
+
+Alternative:
+A calmer, stronger you.
+
+Supporting copy:
+Personal online yoga with Girija Jayashankar — helping clients across India, UAE, Canada, and the USA build healthier, more balanced lives.
+
+Primary CTA:
+Book a Free Class →
+
+Secondary CTA:
+View Services
+
+At the end:
+the story resolves and transitions into the standard vertical sections.
+
+========================================================
+TRANSITION RULE
+========================================================
+
+The 5 scenes must feel like one connected world.
+
+The transition should happen through:
+- changing sky
+- moving light
+- shifting space
+- evolving practice
+- growing ease in the body
+
+Do NOT create:
+- hard-cut slides
+- visible carousel panels
+- 5 separate pages
+- giant boxed scenes
+
+This should feel like:
+one long emotional journey across the day.
+
+========================================================
+AFTER STORY — STANDARD WEBSITE SECTIONS
+========================================================
+
+After the cinematic story, return to normal vertical scrolling.
+
+Sections should be clean, conversion-friendly, and premium.
+
+Include:
+
+1. About Girija
+2. Services
+3. Why Vagartha Yoga
+4. How Online Personal Training Works
+5. Book a Free Class CTA
+6. Contact
+7. Animated Footer
+
+========================================================
+ABOUT GIRIJA
+========================================================
+
+Headline:
+Meet Girija Jayashankar
+
+Subheadline:
+Yoga Instructor • Personal Trainer
+
+Content should communicate:
+- 20+ years professional teaching experience
+- PGDYT
+- trained hundreds of prenatal and postnatal individuals
+- calm, experienced, trustworthy teaching style
+- personal online training approach
+- regular, prenatal, and postnatal yoga focus
+
+Tone:
+warm
+human
+trusted
+refined
+
+If no real portrait is available, use elegant framing or illustration rather than inventing a fake photoreal face.
+
+========================================================
+SERVICES
+========================================================
+
+Headline:
+Personal Online Yoga, Tailored to You
+
+Create 3 clear service cards/panels:
+
+1. Regular Yoga
+2. Prenatal Yoga
+3. Postnatal Yoga
+
+Each should include:
+- short description
+- who it is for
+- key benefits
+- CTA: Book a Free Class →
+
+Keep this section clear and easy to read.
+
+========================================================
+WHY VAGARTHA YOGA
+========================================================
+
+Headline:
+Why Practice with Vagartha Yoga?
+
+Possible pillars:
+- 20+ Years of Experience
+- Personal 1:1 Guidance
+- Online Convenience
+- Gentle Mindful Approach
+- Support Across Life Stages
+- Global Access
+
+Keep copy concise.
+
+Use elegant icons or motifs.
+
+========================================================
+HOW ONLINE TRAINING WORKS
+========================================================
+
+Headline:
+How It Works
+
+Simple 3-step layout:
+
+1. Book a Free Class
+2. Discuss your needs and goals
+3. Begin your personalized online practice
+
+Keep it simple and approachable.
+
+========================================================
+BOOK A FREE CLASS CTA
+========================================================
+
+This should appear clearly multiple times.
+
+Headline:
+Ready to Begin?
+
+Supporting copy:
+Take the first gentle step toward more balance, strength, and calm.
+
+Buttons:
+Book a Free Class →
+Contact on Instagram ↗
+
+Small supporting line:
+Online personal training available for clients in India, UAE, Canada, and the USA.
+
+========================================================
+CONTACT SECTION
+========================================================
+
+Headline:
+Get in Touch
+
+Display clearly:
+
+Girija Jayashankar
+Yoga Instructor
+
+Phone:
++91 8971297242
+
+Email:
+vagarthayoga@gmail.com
+
+Instagram:
+@yogawithgirija
+
+Regions:
+India | UAE | Canada | USA
+
+Keep this premium and scannable.
+
+========================================================
+FOOTER — ANIMATED FINAL SCENE
+========================================================
+
+Replace a plain footer with a calm final pixel-art ending scene.
+
+Concept:
+
+SUNSET STUDIO / MOONLIT WIND-DOWN
+
+Since the story ends in a replenished midnight calm, the footer should feel like the final quiet moment after practice.
+
+Create a peaceful open-air terrace/studio footer scene.
+
+Include:
+- rolled yoga mat
+- tea cup with steam
+- floor cushions
+- yoga strap / block
+- plants gently moving
+- lantern or hanging lamp
+- soft moonlit sky or late-evening gradient
+- subtle city/nature lights in the distance
+- optional incense smoke
+- a sense of the day winding down
+
+Footer content should remain conventional and readable:
+- Vagartha Yoga
+- Girija Jayashankar
+- Yoga Instructor
+- About
+- Services
+- Experience
+- Book a Free Class
+- Contact
+- Instagram
+- phone
+- email
+- copyright
+
+========================================================
+FOOTER ANIMATION SEQUENCE
+========================================================
+
+As the user reaches the footer:
+
+1. the environment settles into a deeper evening tone
+2. the lantern slowly glows on
+3. the tea cup releases subtle steam
+4. plants sway lightly
+5. soft moonlight / ambient shimmer becomes visible
+6. the yoga mat finishes rolling or rests neatly
+7. a few tiny firefly-like glows or soft particles appear subtly
+8. the easter egg sprite settles near a plant/mat as the journey ends
+
+Important:
+keep it subtle and premium
+do not distract from the footer content
+
+========================================================
+FOOTER MICROINTERACTION
+========================================================
+
+When the user hovers over "Book a Free Class":
+- the lantern glows slightly brighter
+- the mat subtly unrolls a few pixels
+- one soft light pulse travels toward the CTA
+
+Keep it elegant and calm.
+
+========================================================
+EASTER EGG
+========================================================
+
+Add one subtle delightful easter egg.
+
+Concept:
+A tiny floating LOTUS SPRITE / LOTUS PETAL SPIRIT.
+
+Behavior:
+- appears quietly in different parts of the page
+- hides among plants / decor
+- if the cursor approaches, it glows softly and drifts away
+- on mobile it may gently relocate after a tap or delay
+- in the footer it can quietly settle near the mat or a plant
+
+It must:
+- never block buttons
+- never block text
+- never become distracting
+- feel meditative, not playful-chaotic
+
+========================================================
+MINUTE DETAILS
+========================================================
+
+Minute details are VERY IMPORTANT.
+
+Add small detailed touches across the story world:
+
+- mat texture
+- steam from tea
+- fabric movement
+- petal drift
+- plant sway
+- distant birds
+- incense smoke
+- breathing motion
+- posture evolution
+- changing sky tones
+- floor texture
+- subtle shadow changes through the day
+- yoga block / strap details
+- reflections of warm light
+- moonlight highlights
+- lantern glow
+- cushion detail
+- clothing folds in pixel art
+- slow wind
+- subtle pose transitions
+- tiny leaves moving
+- breath/ribbon trail animation
+
+These details should make the site feel lovingly authored.
+
+========================================================
+MOBILE VERSION
+========================================================
+
+This site must work beautifully on mobile.
+
+Do NOT force the desktop horizontal story directly onto mobile.
+
+On mobile:
+- convert the story into a vertical illustrated journey
+- preserve the same emotional 5-scene arc
+- maintain the pixel-art world
+- keep CTA access easy
+- keep navigation clean
+- keep Book a Free Class prominent
+
+Mobile must feel intentionally designed, not reduced.
+
+========================================================
+ACCESSIBILITY
+========================================================
+
+Respect prefers-reduced-motion.
+
+If enabled:
+- reduce heavy parallax
+- reduce long pinned animations
+- make scenes easier to consume statically
+- keep all content readable and accessible
+
+Use:
+- semantic HTML
+- proper contrast
+- focus states
+- keyboard accessibility
+- readable font sizes
+
+========================================================
+PERFORMANCE
+========================================================
+
+Preferred stack:
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+
+Animation:
+- GSAP
+- ScrollTrigger
+
+Optional:
+- Lenis
+- Framer Motion for smaller UI interactions
+
+Avoid unnecessary Three.js.
+
+Prefer:
+- optimized assets
+- pixel-art sprites
+- SVG where useful
+- WebP/AVIF for supporting artwork
+- DOM/CSS transforms
+
+Keep the experience smooth and optimized.
+
+========================================================
+DO NOT DO
+========================================================
+
+Do NOT create:
+- generic spa website
+- bland pastel template
+- five disconnected slides
+- childish pixel art
+- loud game UI
+- over-floral clutter
+- preachy transformation messaging
+- fake backend flows
+- giant text walls
+- random decorative clutter with no meaning
+
+========================================================
+FINAL PAGE FLOW
+========================================================
+
+FLOATING NAVBAR
+        ↓
+HERO — OPEN EARLY MORNING SPACE
+        ↓
+MAT / BREATH TRAIL STARTS JOURNEY
+        ↓
+PINNED HORIZONTAL STORY
+        ↓
+SCENE 1
+EARLY MORNING STILLNESS / LOW ENERGY
+        →
+SCENE 2
+FIRST BREATH / MORNING OPENING
+        →
+SCENE 3
+GUIDED PRACTICE / MIDDAY FLOW
+        →
+SCENE 4
+DEEPER TRANSFORMATION / SUNSET BALANCE
+        →
+SCENE 5
+REPLENISHED / MIDNIGHT CALM
+        ↓
+RETURN TO NORMAL VERTICAL SCROLL
+        ↓
+ABOUT GIRIJA
+        ↓
+SERVICES
+        ↓
+WHY VAGARTHA YOGA
+        ↓
+HOW IT WORKS
+        ↓
+BOOK A FREE CLASS
+        ↓
+CONTACT
+        ↓
+ANIMATED FOOTER ENDING
+
+========================================================
+EXECUTION REQUIREMENT
+========================================================
+
+IMPLEMENT THE COMPLETE FRONTEND DESIGN.
+
+Do not only provide a plan.
+
+Do not stop after the hero.
+
+Build the complete UI/UX experience including:
+- navbar
+- hero
+- full pixel-art story world
+- pinned horizontal story controlled by vertical scroll
+- 5 connected story scenes
+- transformation by time of day
+- minute details
+- About section
+- Services section
+- Why Vagartha Yoga
+- How it Works
+- Book a Free Class CTA
+- Contact
+- animated footer
+- easter egg
+- mobile adaptation
+- responsive behavior
+- reduced-motion support
+
+Fix:
+- overflow
+- layout shifts
+- scroll bugs
+- GSAP cleanup issues
+- performance issues
+- responsiveness
+- TypeScript errors
+- broken imports
+
+Test for:
+- desktop
+- tablet
+- mobile
+
+========================================================
+FINAL PRINCIPLE
+========================================================
+
+THIS WEBSITE SHOULD FEEL LIKE A GENTLE, BEAUTIFUL DAY-LONG TRANSFORMATION.
+
+The visitor should feel:
+
+“I can imagine myself becoming calmer here.”
+
+The site should communicate:
+
+Vagartha Yoga helps people move from low energy and disconnection toward calm, strength, balance, and replenishment — through personal online yoga guided by an experienced instructor.
+
+The story should feel:
+premium
+pixel-crafted
+detailed
+soft
+memorable
+emotionally restorative
+
+The user scrolls vertically.
+
+The story moves horizontally.
+
+The frontend should feel unique, visually rich, and conversion-friendly.
+
+========================================================
+HERO LEVITATING WOMAN
+========================================================
+
+Add a visually striking but elegant levitating woman to the hero section.
+
+She should be seated in a calm yoga pose, floating only slightly above the yoga mat.
+
+The effect should symbolize:
+- lightness
+- balance
+- calm
+- restored energy
+
+Do NOT make her look mystical, supernatural, or like a fantasy goddess.
+
+Avoid:
+- glowing chakras
+- excessive aura effects
+- magic circles
+- dramatic energy beams
+- cheesy spiritual imagery
+
+Visual direction:
+- high-detail modern pixel art
+- graceful posture
+- subtle hair movement
+- soft fabric movement
+- early morning open-air setting
+- gentle breeze
+- soft dawn lighting
+- yoga mat beneath her
+- subtle petals / breath trail nearby
+- premium and serene composition
+
+Animation:
+- gentle vertical floating motion
+- extremely slow body sway
+- fabric and hair react softly to wind
+- mat remains below her
+- sunrise gradually brightens behind her
+
+As the user begins scrolling:
+- she gently descends toward the mat
+- mat fully unrolls
+- the breath/ribbon trail begins moving forward
+- this transitions naturally into the horizontal transformation story
+
+The levitating woman should feel like the opening visual symbol of the entire Vagartha Yoga journey.
+IMPORTANT STORY CLARIFICATION:
+
+The levitating woman in the HERO is an aspirational / symbolic visual representing the calm and balance Vagartha Yoga helps people reach.
+
+She is NOT the tired transformation character from Scene 1.
+
+The actual day-long transformation protagonist begins in Scene 1 in a low-energy state and gradually reaches that same sense of calm by the final scene.
+
+The hero should therefore feel aspirational and beautiful, while the horizontal story shows HOW someone gets there.
+
+Do not imply that the levitating woman is specifically Girija Jayashankar unless an actual instructor image is provided.
+Treat her as an elegant symbolic yoga figure within the Vagartha visual world.

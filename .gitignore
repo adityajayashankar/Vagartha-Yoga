@@ -1,0 +1,9 @@
+node_modules/
+.next/
+.next-production/
+out/
+*.tsbuildinfo
+.env*
+!.env.example
+artifacts/
+.next-deploy-check/

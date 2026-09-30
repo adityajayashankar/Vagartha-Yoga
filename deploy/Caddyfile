@@ -1,0 +1,11 @@
+# Import this site fragment from the existing /etc/caddy/Caddyfile.
+# Keep any existing global settings and other sites.
+www.vagarthayoga.com {
+	redir https://vagarthayoga.com{uri} permanent
+}
+
+vagarthayoga.com {
+	encode zstd gzip
+	header -Server
+	reverse_proxy 127.0.0.1:3100
+}

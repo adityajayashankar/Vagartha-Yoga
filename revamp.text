@@ -1,0 +1,1795 @@
+You are GPT-6 ASTRA operating as a senior frontend engineer, creative technologist, interaction designer, motion designer, pixel artist, UX architect, and art director.
+
+You have full access to the existing Vagartha Yoga codebase.
+
+Your job is NOT to produce a design proposal.
+
+Your job is to INSPECT THE EXISTING REPOSITORY, UNDERSTAND THE CURRENT IMPLEMENTATION, AND COMPLETELY REVAMP THE ACTUAL WEBSITE INTO A POLISHED, PRODUCTION-QUALITY EXPERIENCE.
+
+DO NOT stop at analysis.
+DO NOT give me a plan and wait.
+DO NOT ask me to implement anything manually.
+DO NOT return only snippets.
+DO NOT rebuild blindly before understanding the existing code.
+DO NOT throw away working infrastructure unless necessary.
+
+Inspect first.
+Then implement.
+Then run.
+Then visually inspect.
+Then refine.
+Then build/test.
+Then fix issues.
+Then finish the complete site.
+
+========================================================
+PROJECT
+========================================================
+
+Brand:
+VAGARTHA YOGA
+
+Website:
+vagarthayoga.in
+
+Instructor:
+Girija Jayashankar
+
+Business model:
+PERSONAL ONLINE YOGA TRAINING ONLY
+
+Practice types:
+- Regular Yoga
+- Prenatal Yoga
+- Postnatal Yoga
+
+Known factual information:
+- Girija Jayashankar
+- 20+ years of professional teaching experience
+- Has guided hundreds of prenatal and postnatal practitioners
+- PGDYT
+- Post Graduate Diploma in Yoga Therapy
+- Personal training
+- Online classes
+- Instagram: @yogawithgirija
+- Website: vagarthayoga.in
+
+If phone/contact information already exists in the project, preserve it.
+
+Do NOT invent:
+- testimonials
+- awards
+- medical claims
+- certifications beyond PGDYT
+- statistics
+- student names
+- ratings
+- press mentions
+- partnerships
+- email addresses
+- health outcomes
+
+========================================================
+WHY THIS REVAMP IS REQUIRED
+========================================================
+
+The current implementation has a promising pixel-art direction but poor composition and UX.
+
+It currently feels too much like:
+
+- a giant pixel-art slideshow
+- a videogame background
+- repeated copies of the same yoga character
+- huge text floating on top of illustrations
+- five oversized cinematic screens placed next to each other
+- giant decorative scenery overpowering the business
+- massive empty spaces
+- weak content hierarchy
+- too much horizontal storytelling
+- insufficient conventional website content
+- giant scene numbers
+- a videogame-style progress HUD
+- oversized headings
+- important business information buried in animation
+- an illustration showcase rather than a professional yoga business website
+
+DO NOT merely polish the current frames.
+
+RECOMPOSE THE ENTIRE EXPERIENCE.
+
+The pixel art is worth keeping.
+
+The current layout is not.
+
+========================================================
+PRIMARY DESIGN PRINCIPLE
+========================================================
+
+The website must combine:
+
+1. A memorable handcrafted pixel-art world
+
+AND
+
+2. A premium, extremely understandable wellness website
+
+The creative world should enhance comprehension.
+
+It must NEVER replace normal website usability.
+
+A visitor should understand within seconds:
+
+- what Vagartha Yoga is
+- who Girija is
+- what she teaches
+- that sessions are personal
+- that sessions are online
+- Regular Yoga
+- Prenatal Yoga
+- Postnatal Yoga
+- why her experience matters
+- how to book a free class
+- how to contact her
+
+CREATIVITY = PERSONALITY
+
+NAVIGATION + CONTENT = UTILITY
+
+Never confuse them.
+
+========================================================
+OVERALL FEEL
+========================================================
+
+The final website should feel like:
+
+premium editorial wellness brand
++
+boutique personal yoga practice
++
+soft luxury
++
+quiet cinematic storytelling
++
+handcrafted pixel-art world
++
+excellent modern frontend engineering
+
+It should NOT feel like:
+
+- retro videogame
+- RPG
+- pixel platformer
+- anime website
+- children's website
+- SaaS dashboard
+- generic yoga template
+- AI-generated landing page
+- giant slideshow
+- Behance concept that forgot usability
+
+The desired reaction is NOT:
+
+"Cool pixel website."
+
+The desired reaction is:
+
+"This feels peaceful, personal, premium and completely different from every generic yoga website."
+
+========================================================
+DESIGN SYSTEM
+========================================================
+
+Preserve the Vagartha identity.
+
+Core palette direction:
+
+Warm Ivory
+Soft Cream
+Dusty Rose
+Muted Lavender
+Soft Pink
+Deep Plum
+Sage
+Warm Peach
+Moonlit Violet
+
+Avoid:
+- neon colors
+- electric blue
+- harsh gradients
+- black-heavy themes
+- excessive glassmorphism
+- fluorescent accents
+
+Use soft tonal transitions.
+
+The cinematic sequence should naturally move through:
+
+pre-dawn
+→ sunrise
+→ warm morning
+→ afternoon
+→ golden hour
+→ dusk
+→ night
+
+The page itself should feel calm and editorial.
+
+========================================================
+TYPOGRAPHY
+========================================================
+
+Use elegant editorial typography.
+
+HEADLINES:
+Use an elegant serif such as:
+- Instrument Serif
+- Cormorant Garamond
+- DM Serif Display
+- similar if already available
+
+BODY / UI:
+Use:
+- Inter
+- DM Sans
+- Manrope
+- or equivalent clean sans-serif
+
+Use italic serif emphasis sparingly.
+
+Examples:
+
+Find your way
+back to yourself.
+
+Yoga for every
+season of life.
+
+A little stronger.
+A little lighter.
+
+Do NOT italicize excessive text.
+
+Avoid tiny body text.
+
+Avoid gigantic 120px+ headlines simply to fill space.
+
+Suggested desktop scale:
+
+Hero headline:
+70–90px approximately depending on font
+
+Section headline:
+48–68px
+
+Cinematic copy:
+42–64px
+
+Body:
+16–19px
+
+Maximum content width:
+approximately 1280–1440px
+
+========================================================
+PIXEL ART DIRECTION
+========================================================
+
+KEEP PIXEL ART.
+
+But significantly mature it.
+
+The pixel aesthetic should feel:
+
+- handcrafted
+- editorial
+- elegant
+- warm
+- detailed
+- restrained
+
+NOT:
+- Minecraft
+- 8-bit arcade
+- pixel RPG
+- retro game HUD
+
+Use one coherent pixel-art system.
+
+Every asset should share:
+
+- matching pixel density
+- same edge treatment
+- same character proportions
+- same perspective
+- same lighting logic
+- same palette
+- same visual fidelity
+
+Prefer:
+
+- custom SVG pixel art
+- CSS pixel elements
+- sprite sheets
+- lightweight PNG/WebP assets
+- DOM animation
+
+Do NOT create five unrelated giant raster images.
+
+Do NOT mix:
+pixel art + realistic photography + 3D + random AI art.
+
+========================================================
+THE MAIN CHARACTER
+========================================================
+
+Use ONE consistent yoga character representing Girija / the instructor.
+
+She is the recurring protagonist of the cinematic story.
+
+Do NOT show multiple clones of her in one viewport.
+
+Do NOT repeat the same character every few hundred pixels.
+
+The character progresses through the day.
+
+Possible states:
+
+- seated meditation
+- gentle stretch
+- breathing pose
+- standing balance
+- seated pose
+- stronger asana
+- final meditation
+
+Use consistent:
+
+- face
+- hairstyle
+- clothing
+- palette
+- proportions
+
+Animation can use sprite states.
+
+Keep movement graceful.
+
+========================================================
+SITE ARCHITECTURE
+========================================================
+
+The final page structure should be:
+
+NAVBAR
+↓
+PREMIUM HERO
+↓
+SHORT BRAND INTRODUCTION
+↓
+"A DAY WITH YOURSELF"
+CINEMATIC SCROLL STORY
+↓
+RETURN TO NORMAL VERTICAL SCROLL
+↓
+SERVICES
+↓
+WHY PERSONAL TRAINING
+↓
+EXPERIENCE
+↓
+ABOUT GIRIJA
+↓
+HOW IT WORKS
+↓
+TESTIMONIALS ONLY IF REAL DATA EXISTS
+↓
+BOOK FREE CLASS CTA
+↓
+CONTACT
+↓
+PREMIUM ANIMATED FOOTER
+
+Do NOT make the entire website horizontal.
+
+Only the signature cinematic story should use horizontal motion.
+
+========================================================
+NAVBAR
+========================================================
+
+Keep the navbar conventional and premium.
+
+Floating rounded cream/light navbar.
+
+Desktop structure:
+
+LEFT
+Vagartha logo
+
+CENTER
+About
+Sessions
+Approach
+Experience
+Contact
+
+RIGHT
+Instagram ↗
+Book Free Class ↗
+
+Requirements:
+
+- sticky/fixed behavior
+- comfortable but not huge
+- subtle border
+- minimal shadow
+- strong alignment
+- anchors must work
+- active/hover states
+- mobile navigation
+- CTA always easy to find
+
+The navbar must remain usable while the cinematic section is active.
+
+Do NOT use experimental navigation.
+
+========================================================
+HERO
+========================================================
+
+REBUILD THE HERO COMPLETELY.
+
+The current hero is too visually busy.
+
+Create a premium editorial layout.
+
+Desktop:
+
+approximately:
+
+45% copy
+55% visual
+
+Lots of breathing room.
+
+LEFT:
+
+small eyebrow:
+
+PERSONAL ONLINE YOGA · WITH GIRIJA JAYASHANKAR
+
+Headline:
+
+Find your way
+back to yourself.
+
+OR, if composition works better:
+
+Yoga that meets you
+where you are.
+
+Keep the wording elegant and human.
+
+Supporting copy:
+
+Personal yoga guidance for strength, mobility, calm and every season of life.
+
+Small category line:
+
+Regular · Prenatal · Postnatal
+
+Primary CTA:
+
+Book a Free Class →
+
+Secondary:
+
+Explore Sessions
+
+Trust/value line:
+
+20+ years teaching · Personal 1:1 guidance · Online
+
+RIGHT:
+
+one beautiful pixel-art open-space yoga scene.
+
+Environment:
+
+- open terrace / garden
+- mountains or distant landscape
+- soft sunrise
+- plants
+- yoga mat
+- distant birds
+- subtle cloud movement
+- warm sunlight
+- lots of negative space
+
+The character should be integrated into the environment.
+
+Do NOT fill the entire hero with scenery.
+
+Do NOT place text on top of important illustration details.
+
+========================================================
+HERO SIGNATURE MOMENT
+========================================================
+
+Add one restrained surreal detail:
+
+SUBTLE MEDITATIVE LEVITATION.
+
+During an idle meditation state, the yoga character may slowly rise approximately:
+
+10–20px
+
+Very slow.
+
+Her shadow remains below.
+
+Hair/fabric can react slightly.
+
+Nearby leaves can shift slightly.
+
+No glowing aura.
+No magic explosion.
+No superhero floating.
+No dramatic special effects.
+
+It should communicate:
+
+lightness
+stillness
+balance
+
+Use this sparingly.
+
+========================================================
+INTRO TRANSITION
+========================================================
+
+Between hero and cinematic story, add a calm editorial transition.
+
+Possible copy:
+
+A practice can change the way a day feels.
+
+Then introduce:
+
+A DAY.
+A BREATH.
+A NEW BEGINNING.
+
+Headline:
+
+From the first breath
+to the quiet at the end of the day.
+
+Supporting:
+
+Move through a gentle day of practice with Girija.
+
+Keep this transition clean.
+
+========================================================
+SIGNATURE EXPERIENCE
+"A DAY WITH YOURSELF"
+========================================================
+
+This is the creative centerpiece.
+
+DESKTOP:
+
+Use a pinned scroll-driven cinematic environment.
+
+Vertical user scrolling can drive horizontal world movement.
+
+Use GSAP + ScrollTrigger if appropriate.
+
+IMPORTANT:
+
+This must NOT feel like five slides.
+
+Build ONE CONTINUOUS WORLD.
+
+The environment should feel connected.
+
+The camera travels through a continuous terrace / garden / open-air practice space.
+
+Instead of:
+
+SCREEN 1
+SCREEN 2
+SCREEN 3
+
+Think:
+
+ONE LONG ILLUSTRATED WORLD
+
+where time changes naturally.
+
+The character progresses through different activities.
+
+Objects can naturally pass through the scene:
+
+- plants
+- pergola
+- lantern
+- yoga accessories
+- trees
+- balcony rail
+- flowers
+- mountains
+- clouds
+- sun
+- moon
+
+========================================================
+CINEMATIC COMPOSITION RULES
+========================================================
+
+At any point in the cinematic sequence:
+
+ONE PRIMARY FOCAL POINT.
+
+Do NOT show:
+
+- multiple huge text blocks
+- duplicated women
+- giant headings on both sides
+- excessive scenery
+- lots of UI widgets
+- giant stage numbers
+
+Text should occupy perhaps 25–35% of the screen.
+
+Illustration remains important, but composition must breathe.
+
+Keep text readable.
+
+Never place text directly over complicated scenery without sufficient contrast.
+
+========================================================
+STAGE 1
+05:45 AM — THE PAUSE
+========================================================
+
+Pre-dawn.
+
+Cool lavender sky.
+
+Very faint stars.
+
+Moon still visible.
+
+Lantern nearby.
+
+Character sits quietly.
+
+Plants barely move.
+
+Copy:
+
+Before the world
+asks anything of you.
+
+Supporting:
+
+Take a moment that belongs only to you.
+
+Use minimal copy.
+
+========================================================
+STAGE 2
+07:00 AM — THE FIRST BREATH
+========================================================
+
+Sunrise begins.
+
+Character starts breathing/stretching.
+
+Warm light enters the environment.
+
+Birds can cross far in the distance.
+
+Copy:
+
+It starts with
+one breath.
+
+Supporting:
+
+A little space. A gentle stretch. A beginning.
+
+========================================================
+STAGE 3
+12:30 PM — YOUR OWN RHYTHM
+========================================================
+
+Bright but soft daylight.
+
+Character moves through a gentle asana.
+
+Introduce services naturally.
+
+Small understated labels:
+
+Regular
+Prenatal
+Postnatal
+
+Copy:
+
+Guided for your
+season of life.
+
+Supporting:
+
+Personal practice shaped around your body, pace and needs.
+
+Do NOT turn the labels into giant cards.
+
+========================================================
+STAGE 4
+06:15 PM — QUIET TRANSFORMATION
+========================================================
+
+Golden hour.
+
+Longer shadows.
+
+Character performs a slightly stronger pose.
+
+Flowers/plants move subtly.
+
+Copy:
+
+A little stronger.
+A little lighter.
+
+Supporting:
+
+Strength without pressure. Progress without comparison.
+
+========================================================
+STAGE 5
+10:30 PM — RETURN TO YOURSELF
+========================================================
+
+Night.
+
+Deep plum sky.
+
+Stars.
+
+Soft lantern lighting.
+
+Character returns to meditation.
+
+After the scene settles, optionally trigger the subtle levitation moment.
+
+Copy:
+
+Replenished.
+Rooted.
+At ease.
+
+Supporting:
+
+The day settles. So do you. Carry a little of this calm into tomorrow.
+
+CTA:
+
+Book a Free Class →
+
+========================================================
+PROGRESS INDICATOR
+========================================================
+
+REMOVE the current giant dark videogame HUD.
+
+REMOVE giant 01 / 02 / 03 / 04 / 05 numbers.
+
+Replace with something refined.
+
+For example:
+
+05:45 ───── 07:00 ───── 12:30 ───── 18:15 ───── 22:30
+
+Small dots.
+
+Thin line.
+
+Current period subtly highlighted.
+
+Small label:
+
+Your day with Vagartha
+
+It should look editorial, not gamified.
+
+========================================================
+PARALLAX
+========================================================
+
+Use real depth, but subtly.
+
+Possible layers:
+
+1. sky
+2. distant mountains
+3. far trees
+4. railing/environment
+5. instructor
+6. foreground plants
+7. tiny particles/leaves if appropriate
+
+Different layers move at subtly different speeds.
+
+Do not exaggerate parallax.
+
+Avoid motion sickness.
+
+========================================================
+EXIT THE CINEMATIC EXPERIENCE
+========================================================
+
+CRITICAL.
+
+When the night chapter finishes:
+
+STOP HORIZONTAL SCROLLING.
+
+Release the pinned section cleanly.
+
+Return the visitor to conventional vertical browsing.
+
+No scroll lock.
+
+No snapping bug.
+
+No blank spacer.
+
+No sudden layout jump.
+
+No endless pinned sequence.
+
+From this point onward:
+
+clarity
+business information
+trust
+booking
+
+take priority.
+
+========================================================
+SERVICES
+========================================================
+
+Eyebrow:
+
+PERSONAL PRACTICE
+
+Headline:
+
+Yoga for every season
+of your life.
+
+Build three elegant editorial service presentations:
+
+REGULAR YOGA
+
+Focus:
+- strength
+- mobility
+- breathing
+- balance
+- flexibility
+- individual pacing
+
+PRENATAL YOGA
+
+Use careful language.
+
+Focus:
+- gentle guided practice
+- movement
+- mobility
+- comfort-aware personal sessions
+
+Do NOT make medical claims.
+
+POSTNATAL YOGA
+
+Focus:
+- gradual return to movement
+- mobility
+- rebuilding strength at an appropriate pace
+- personalised guidance
+
+Do NOT make medical claims.
+
+Every service clearly states:
+
+PERSONAL TRAINING
+ONLINE
+
+CTA:
+
+Learn More →
+
+Avoid generic SaaS card grids.
+
+Possible visual treatment:
+
+editorial panels
++
+small pixel-art vignettes.
+
+========================================================
+WHY PERSONAL TRAINING
+========================================================
+
+Create a beautiful section around:
+
+Not another class.
+Your practice.
+
+Explain the benefit of personal attention.
+
+Four pillars:
+
+PERSONALISED PRACTICE
+
+Every session adapts to the individual.
+
+YOUR PACE
+
+Progress without pressure.
+
+LIVE GUIDANCE
+
+Real-time guidance and personal attention.
+
+WHEREVER YOU ARE
+
+Online sessions designed to fit real life.
+
+Add tiny pixel-art accents.
+
+Do NOT create four giant glass cards.
+
+========================================================
+EXPERIENCE
+========================================================
+
+Build a premium editorial credibility section.
+
+Use large factual typography.
+
+20+
+
+Years of professional teaching experience
+
+HUNDREDS
+
+of prenatal and postnatal practitioners guided
+
+PGDYT
+
+Post Graduate Diploma in Yoga Therapy
+
+Headline:
+
+Experience you can feel.
+
+Supporting:
+
+Girija Jayashankar brings more than two decades of teaching experience to every session, combining thoughtful movement, personal attention and an understanding that no two bodies or journeys are the same.
+
+Do not invent anything else.
+
+========================================================
+ABOUT GIRIJA
+========================================================
+
+Create a warm editorial section.
+
+Headline:
+
+Meet Girija.
+
+Use one strong visual area and one text area.
+
+Do not create another massive landscape.
+
+Could use:
+
+- pixel portrait/vignette
+- quiet seated scene
+- plants
+- small background details
+
+The copy should emphasize:
+
+- experience
+- calm personal teaching
+- individual needs
+- consistency
+- long-term relationship with yoga
+
+Avoid overdramatic brand copy.
+
+========================================================
+HOW IT WORKS
+========================================================
+
+Headline:
+
+Your first class is simple.
+
+01
+Book your free class
+
+02
+Talk about your goals and needs
+
+03
+Begin your personal practice
+
+Keep it clean.
+
+Desktop:
+horizontal
+
+Mobile:
+vertical
+
+CTA:
+
+Book My Free Class →
+
+========================================================
+TESTIMONIALS
+========================================================
+
+FIRST inspect the codebase/data.
+
+If real testimonials already exist:
+use them.
+
+If no real testimonials exist:
+DO NOT INVENT ANY.
+
+Either:
+
+- omit the section
+OR
+- create an empty component/data structure ready for future real testimonials without rendering fake content.
+
+========================================================
+BOOKING CTA
+========================================================
+
+Create a premium conversion section.
+
+Use deep plum / muted lavender contrast.
+
+Small moon / plant / mat pixel-art motif.
+
+Headline:
+
+Make a little room
+for yourself.
+
+Supporting:
+
+Book a free introductory class with Girija and discover a practice shaped around you.
+
+Primary CTA:
+
+Book a Free Class ↗
+
+Secondary:
+
+Contact Girija
+
+========================================================
+CONTACT
+========================================================
+
+Make contact obvious.
+
+Show:
+
+Instagram
+@yogawithgirija
+
+Website
+vagarthayoga.in
+
+Use existing phone/email from codebase if present.
+
+Do NOT invent missing details.
+
+If existing project already contains booking links, preserve and wire them correctly.
+
+========================================================
+FOOTER
+========================================================
+
+Do NOT end the site after the cinematic sequence.
+
+Create a substantial but elegant footer.
+
+Deep plum / night palette.
+
+Structure:
+
+VAGARTHA YOGA
+
+Short description.
+
+PRACTICE
+Regular Yoga
+Prenatal Yoga
+Postnatal Yoga
+
+EXPLORE
+About Girija
+Experience
+Book a Class
+
+CONNECT
+Instagram
+Contact
+
+Bottom:
+© Vagartha Yoga
+
+Only show Privacy / Terms if corresponding routes/content exist.
+
+========================================================
+FOOTER PIXEL ANIMATION
+========================================================
+
+Add one charming final visual moment.
+
+The bottom of the footer can contain a subtle nighttime pixel landscape.
+
+Possible animation:
+
+- stars twinkle
+- tiny clouds move
+- flowers sway
+- lantern/window glows
+- occasional subtle shooting star
+- moon drifts imperceptibly
+
+After several seconds:
+
+the yoga character can appear quietly seated beside the mat.
+
+Keep this tiny.
+
+Do NOT create another hero-sized animation.
+
+The ending should feel like the website exhaling.
+
+========================================================
+MICROINTERACTIONS
+========================================================
+
+Use tasteful motion:
+
+- buttons rise 1–2px
+- arrows shift 2–4px
+- content reveals softly
+- navbar slightly compresses on scroll
+- sunlight moves subtly
+- plants sway
+- stars twinkle
+- bird silhouettes occasionally move
+- scene lighting changes with time
+- mat/fabric has tiny secondary movement
+
+Avoid:
+
+- bouncing UI
+- confetti
+- aggressive cursor effects
+- spinning cards
+- neon trails
+- huge particles
+- mouse-follow blobs
+- random floating icons
+- gamified sound effects
+- autoplay audio
+
+========================================================
+RESPONSIVE STRATEGY
+========================================================
+
+DESKTOP
+
+Full cinematic scroll story.
+
+TABLET
+
+Simplified cinematic sequence.
+
+Reduce parallax.
+
+Reduce scenery complexity.
+
+MOBILE
+
+DO NOT use a massive pinned horizontal world.
+
+Transform the journey into vertical storytelling.
+
+Example:
+
+05:45
+illustration
+copy
+
+↓
+
+07:00
+illustration
+copy
+
+↓
+
+12:30
+
+↓
+
+18:15
+
+↓
+
+22:30
+
+Maintain the same progression.
+
+Keep visual continuity.
+
+Reduce animations.
+
+Booking CTA remains easy to reach.
+
+Navbar becomes a compact premium mobile menu.
+
+No horizontal overflow.
+
+No clipped headings.
+
+No tiny text.
+
+========================================================
+TECHNICAL APPROACH
+========================================================
+
+FIRST inspect package.json and existing architecture.
+
+Do not unnecessarily replace the framework.
+
+Use existing:
+
+- React / Next.js / Vite etc.
+- styling approach
+- routing
+- components
+
+If GSAP is already installed:
+use it.
+
+If not installed and appropriate:
+install GSAP.
+
+Preferred motion stack:
+
+GSAP
+ScrollTrigger
+
+Optional:
+Framer Motion for small UI transitions if already present.
+
+Avoid Three.js.
+
+Avoid WebGL unless the current architecture already depends on it and it genuinely improves the site.
+
+Prefer:
+
+HTML
+CSS
+SVG
+DOM
+small sprites
+GSAP transforms
+
+========================================================
+CODE QUALITY
+========================================================
+
+Keep code maintainable.
+
+Break major sections into sensible components.
+
+Possible structure:
+
+components/
+  Navbar
+  Hero
+  PixelScene
+  DayJourney
+  DayStage
+  Services
+  PersonalTraining
+  Experience
+  About
+  HowItWorks
+  BookingCTA
+  Contact
+  Footer
+
+Use data structures for repeated content.
+
+Do NOT create one 3000-line component.
+
+Do NOT scatter magic numbers everywhere.
+
+Centralize major content where practical.
+
+Use CSS variables/design tokens for major colors.
+
+Keep animation logic organized.
+
+Clean up ScrollTrigger instances on unmount.
+
+Use gsap.context where appropriate.
+
+========================================================
+PIXEL ART IMPLEMENTATION
+========================================================
+
+Before blindly creating new artwork:
+
+INSPECT all existing visual assets.
+
+Identify what is salvageable.
+
+Reuse good assets where possible.
+
+Redraw or replace weak/inconsistent ones.
+
+If current pixel woman artwork is usable:
+make it consistent and animate via poses/states.
+
+If artwork quality is poor:
+create better lightweight equivalents.
+
+Do NOT use external copyrighted art.
+
+Do NOT copy another website's illustrations.
+
+Do NOT import random pixel packs.
+
+Create original Vagartha visuals.
+
+========================================================
+ACCESSIBILITY
+========================================================
+
+Implement:
+
+semantic landmarks
+keyboard navigation
+focus-visible states
+accessible contrast
+aria labels where necessary
+alt text where appropriate
+proper buttons vs links
+working navigation anchors
+
+Respect:
+
+prefers-reduced-motion
+
+When reduced motion is enabled:
+
+- disable heavy parallax
+- disable levitation
+- avoid long pinned scroll
+- show cinematic scenes in simplified static/vertical form
+- minimize moving scenery
+
+========================================================
+PERFORMANCE
+========================================================
+
+Pixel art must NOT become an excuse for a heavy website.
+
+Optimize:
+
+- image dimensions
+- image formats
+- font loading
+- SVG complexity
+- sprite usage
+- above-the-fold assets
+- lazy loading
+- animations
+
+Avoid:
+
+- giant PNG backgrounds
+- massive animated GIFs
+- unnecessary Canvas
+- unnecessary WebGL
+- 4K illustrations
+- hundreds of DOM particles
+
+Animate mainly:
+
+transform
+opacity
+
+Target smooth performance.
+
+========================================================
+SEO / SEMANTICS
+========================================================
+
+Preserve or improve existing metadata.
+
+Use proper:
+
+title
+description
+heading hierarchy
+semantic sections
+links
+image alt text
+
+Do not keyword-stuff.
+
+Do not break existing SEO setup.
+
+========================================================
+CONTENT STYLE
+========================================================
+
+Voice:
+
+- calm
+- warm
+- personal
+- experienced
+- understated
+- human
+
+Avoid:
+
+- spiritual clichés
+- fake medical promises
+- pseudo-science
+- excessive Sanskrit terminology
+- exaggerated transformation claims
+- corporate SaaS language
+- generic AI copy
+
+Short sentences are preferred.
+
+Let typography and spacing carry emotion.
+
+========================================================
+ABSOLUTE DO-NOT LIST
+========================================================
+
+DO NOT:
+
+- reproduce the current giant slideshow
+- keep repeated yoga women in one viewport
+- create giant 01 / 02 / 03 / 04 / 05 numbers
+- use a game-style progress bar
+- use videogame HUD elements
+- fill every screen edge-to-edge with scenery
+- make the whole page horizontal
+- make all content animated
+- build a generic yoga template
+- build a generic SaaS layout
+- use stock photography
+- use random AI-generated art styles
+- use excessive glassmorphism
+- use excessive blur
+- use neon
+- use giant gradient blobs
+- invent testimonials
+- invent medical claims
+- invent qualifications
+- invent statistics
+- duplicate content unnecessarily
+- use enormous text that clips
+- hide important content in animation
+- break anchor navigation
+- hijack scrolling aggressively
+- create scroll-jank
+- create layout shifts
+- leave placeholder content
+- leave TODO UI
+- leave unfinished sections
+
+========================================================
+EXECUTION PROCESS
+========================================================
+
+Follow this process autonomously.
+
+PHASE 1 — INSPECT
+
+Inspect:
+
+- repository structure
+- framework
+- routing
+- current homepage
+- current CSS
+- design tokens
+- current animations
+- current assets
+- current responsive behavior
+- existing booking/contact links
+- content/data files
+- dependencies
+
+Identify what should be reused and what should be replaced.
+
+DO NOT stop and report findings unless something truly blocks implementation.
+
+Proceed automatically.
+
+PHASE 2 — ARCHITECT
+
+Refactor only where necessary.
+
+Establish:
+
+- page structure
+- design tokens
+- typography
+- layout primitives
+- animation architecture
+- reusable pixel scene components
+
+PHASE 3 — IMPLEMENT
+
+Build the complete experience.
+
+Do not stop at hero.
+
+Do not stop at cinematic story.
+
+Implement ALL sections.
+
+PHASE 4 — RUN
+
+Start the app.
+
+Inspect runtime errors.
+
+Fix them.
+
+PHASE 5 — VISUAL QA
+
+Use the available browser/preview tooling.
+
+Actually inspect the rendered site.
+
+Do NOT assume CSS is correct because the code compiled.
+
+Look for:
+
+- bad spacing
+- clipping
+- overflow
+- text collisions
+- broken images
+- weak contrast
+- malformed pixel assets
+- huge empty areas
+- strange animation states
+- duplicate character appearances
+- navbar problems
+- scroll problems
+
+Refine what looks bad.
+
+PHASE 6 — RESPONSIVE QA
+
+Test at least:
+
+1920 × 1080
+1440 × 900
+1280 × 800
+1024 × 768
+768 × 1024
+430 × 932
+390 × 844
+375 × 812
+
+Fix:
+
+- horizontal overflow
+- text clipping
+- navbar collisions
+- CTA wrapping
+- illustration cropping
+- scroll pinning bugs
+- scene height issues
+
+PHASE 7 — BUILD QA
+
+Run the appropriate:
+
+lint
+typecheck
+build
+
+Fix:
+
+- TypeScript errors
+- lint problems that affect correctness
+- React warnings
+- hydration issues
+- missing keys
+- runtime errors
+- console errors
+- broken imports
+- animation cleanup issues
+
+The production build must succeed.
+
+========================================================
+VISUAL QUALITY CHECK
+========================================================
+
+Before considering the task complete, look at the website and ask:
+
+Does this look like a professionally art-directed website?
+
+Does the hero feel calm?
+
+Is the main message obvious?
+
+Does the page breathe?
+
+Is the character repeated too often?
+
+Does the pixel art support the content?
+
+Does the cinematic section feel like ONE world?
+
+Does the day actually transition visually?
+
+Is there enough normal vertical content afterward?
+
+Would a 45-year-old non-technical visitor immediately understand how to book a class?
+
+Does it feel premium rather than cute-for-the-sake-of-cute?
+
+Does mobile feel intentionally designed?
+
+If any answer is "no", continue refining.
+
+========================================================
+FINAL QUALITY BAR
+========================================================
+
+The final product should feel like:
+
+a real boutique yoga brand hired a strong art director,
+a pixel artist,
+a motion designer,
+and a senior frontend engineer
+to create something memorable specifically for Vagartha.
+
+It must NOT feel like an AI assembled a landing page from components.
+
+The pixel world should feel authored.
+
+The page should feel spacious.
+
+Typography should feel intentional.
+
+Motion should feel calm.
+
+The business proposition should remain extremely obvious.
+
+========================================================
+FINAL PRODUCT STORY
+========================================================
+
+The visitor arrives in the morning.
+
+The world is quiet.
+
+They meet Girija.
+
+They discover the practice.
+
+They move through a day.
+
+Morning begins with a breath.
+
+Noon finds its rhythm.
+
+Evening feels stronger.
+
+Night becomes still.
+
+Then the cinematic world releases them back into a clear, conventional website where they can understand:
+
+- the sessions
+- personal training
+- Girija's experience
+- how the process works
+- how to book
+
+The website ends quietly at night.
+
+The visitor should leave with one simple feeling:
+
+"I want to try a class."
+
+========================================================
+FINAL INSTRUCTION
+========================================================
+
+NOW IMPLEMENT THIS IN THE EXISTING CODEBASE.
+
+Do not merely explain how you would do it.
+
+Do not return a design specification instead of editing files.
+
+Do not stop after the first successful build.
+
+Inspect the actual rendered result and refine it.
+
+Take ownership of the full frontend implementation.
+
+Preserve working functionality.
+
+Improve architecture where justified.
+
+Finish every section.
+
+Fix every obvious UI problem you encounter.
+
+Run the project.
+
+Test it.
+
+Build it.
+
+Leave the repository in a clean, production-ready state.
+
+You have creative freedom inside these constraints.
+
+Use that freedom.
+
+Make Vagartha feel like it has its own little world, but remember:
+
+THE PIXEL WORLD IS THE PERSONALITY.
+
+THE YOGA PRACTICE IS THE PRODUCT.
+
+THE WEBSITE IS THE UTILITY.
+
+The final experience must succeed at all three.

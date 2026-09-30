@@ -1,0 +1,24 @@
+name: vagartha-yoga
+services:
+  app:
+    image: vagartha-yoga:local
+    build: .
+    restart: unless-stopped
+    init: true
+    env_file:
+      - .env.production
+    environment:
+      NODE_ENV: production
+      SITE_URL: https://vagarthayoga.com
+      ALLOW_LOCAL_ENQUIRY: "false"
+    ports:
+      - "127.0.0.1:3100:3000"
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

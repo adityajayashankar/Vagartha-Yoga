@@ -1,0 +1,1353 @@
+You are GPT-6 ASTRA operating in HIGH reasoning mode as a senior creative frontend engineer, 2D animation engineer, pixel animator, motion designer, and interaction designer.
+
+You are working inside the EXISTING Vagartha Yoga codebase.
+
+THIS IS NOT A REDESIGN.
+
+The current:
+
+- page layout
+- typography
+- wording
+- spacing
+- section order
+- navbar
+- service section
+- About Girija section
+- experience section
+- color direction
+- responsive structure
+- overall scroll choreography
+
+are already approved.
+
+DO NOT redesign them.
+
+DO NOT rewrite the copy.
+
+DO NOT restructure the page.
+
+DO NOT replace the current visual identity.
+
+Your task is specifically to perform a HIGH-QUALITY ANIMATION REVAMP.
+
+========================================================
+THE PROBLEM
+========================================================
+
+The current site has good motion design but poor actual animation.
+
+There is an important distinction:
+
+MOTION DESIGN:
+scroll movement, section progression, crossfades, transitions
+
+PIXEL ANIMATION:
+the actual woman moving, breathing, stretching, shifting weight,
+hair responding, clothes moving, plants swaying, birds flying,
+light changing, clouds moving, props reacting, etc.
+
+The motion design is acceptable.
+
+The PIXEL ANIMATION IS NOT.
+
+Right now many scenes effectively behave like:
+
+STATIC IMAGE
+→ crossfade
+→ STATIC IMAGE
+→ pose swap
+→ STATIC IMAGE
+
+This is unacceptable.
+
+A pose changing from A directly into B is NOT character animation.
+
+A background changing color is NOT a convincing day/night animation.
+
+Moving an entire PNG by 10px is NOT environmental animation.
+
+The finished experience must feel ALIVE.
+
+========================================================
+ABSOLUTE RULE
+========================================================
+
+PRESERVE THE EXISTING WEBSITE.
+
+Perform an animation-focused pass only.
+
+Do not destroy working layouts while fixing animation.
+
+Before editing anything:
+
+1. inspect the existing components
+2. inspect every current pixel asset
+3. inspect the GSAP timelines
+4. inspect CSS animation
+5. inspect ScrollTrigger usage
+6. determine whether character artwork is PNG, SVG, DOM or layered
+7. identify every fake/static animation
+8. replace those with genuine animation systems
+
+Proceed directly into implementation after inspection.
+
+Do not stop and ask for approval.
+
+========================================================
+PRIMARY QUALITY TARGET
+========================================================
+
+The character should feel like a tiny living person inside the scene.
+
+The environment should feel like a living place.
+
+The animations should be restrained, elegant and pixel-art appropriate.
+
+Think:
+
+premium pixel animation
++
+Studio Ghibli-style environmental observation in spirit
++
+careful indie-game sprite animation craftsmanship
++
+editorial web motion
+
+DO NOT copy artwork from any existing game, film or website.
+
+Use this only as a quality philosophy.
+
+========================================================
+IMPORTANT PIXEL ANIMATION PRINCIPLE
+========================================================
+
+Pixel animation SHOULD NOT run like buttery 60fps vector animation.
+
+The WEBSITE may render at 60fps.
+
+But character sprite animation should intentionally feel handcrafted.
+
+Preferred apparent character animation rate:
+
+8–12 fps
+
+Use stepped frame progression where appropriate.
+
+Environmental elements may animate more smoothly when suitable.
+
+Examples:
+
+breathing:
+slow smooth cycle
+
+hair:
+small stepped secondary animation
+
+hands:
+careful keyed movement
+
+birds:
+8–12fps sprite animation
+
+plant leaves:
+subtle stepped or smooth movement
+
+lighting:
+smooth interpolation
+
+scroll movement:
+smooth 60fps transforms
+
+This combination is important.
+
+========================================================
+CHARACTER SYSTEM
+========================================================
+
+The yoga instructor is currently too static.
+
+Rebuild the animation architecture of the instructor.
+
+Do NOT simply translate the whole character image.
+
+Do NOT scale the whole PNG up/down to simulate breathing.
+
+Do NOT instantly swap one full-body image for another.
+
+If the existing artwork is a single flattened bitmap and cannot be animated properly:
+
+REBUILD THE CHARACTER INTO A LAYERED ANIMATABLE ASSET WHILE PRESERVING HER CURRENT VISUAL APPEARANCE.
+
+Possible layers:
+
+- head
+- hair back
+- hair front
+- torso
+- pelvis
+- upper arm left
+- forearm left
+- hand left
+- upper arm right
+- forearm right
+- hand right
+- thigh left
+- shin left
+- foot left
+- thigh right
+- shin right
+- foot right
+- clothing details
+- shadow
+
+Use SVG, DOM pixel layers, sprite frames, or a combination.
+
+Choose whatever integrates best with the existing implementation.
+
+Do not introduce Canvas/WebGL unless absolutely necessary.
+
+========================================================
+CHARACTER MOTION LANGUAGE
+========================================================
+
+Movement must include:
+
+ANTICIPATION
+→ ACTION
+→ FOLLOW THROUGH
+→ SETTLE
+
+Example:
+
+If she raises her arms:
+
+BAD:
+
+arms suddenly appear above head
+
+GOOD:
+
+shoulders prepare
+→ elbows begin moving
+→ forearms follow
+→ torso subtly adjusts
+→ arms reach position
+→ clothing/hair settles
+
+Movement should remain subtle because this is yoga.
+
+No cartoon bouncing.
+
+No exaggerated squash/stretch.
+
+========================================================
+BREATHING SYSTEM
+========================================================
+
+Create a convincing idle breathing loop.
+
+The character should NEVER feel completely frozen while visible.
+
+Breathing cycle approximately:
+
+4–7 seconds
+
+Effects may include:
+
+- torso expansion by only a few pixels
+- shoulders rise slightly
+- hands respond subtly
+- head moves 1px
+- clothing shifts
+- shadow responds imperceptibly
+
+Do not simply scale the entire body.
+
+The movement should originate from the torso.
+
+Use different timing for inhale and exhale.
+
+Example:
+
+inhale:
+slightly shorter
+
+tiny pause
+
+exhale:
+slower
+
+tiny pause
+
+Avoid mechanical looping.
+
+Add very small timing variation where appropriate.
+
+========================================================
+FACE / HEAD
+========================================================
+
+Add tiny character life.
+
+Possible:
+
+- occasional blink
+- small head tilt
+- tiny eye movement if visible
+- slight breathing response
+- loose hair strand movement
+
+Blink timing should NOT be a rigid every-3-seconds loop.
+
+Use deterministic variation.
+
+For example:
+
+blink
+wait 4.5 sec
+blink
+wait 6.8 sec
+double blink occasionally
+wait 5.2 sec
+
+Keep it subtle.
+
+========================================================
+HAIR
+========================================================
+
+Hair currently behaves as painted pixels.
+
+Give it secondary motion.
+
+Hair should respond slightly when:
+
+- arms move
+- torso bends
+- character settles into pose
+- environmental breeze moves through scene
+
+Only a few pixels of displacement are required.
+
+Do not create flowing anime hair.
+
+========================================================
+CLOTHING
+========================================================
+
+Add tiny cloth response.
+
+Examples:
+
+top hem moves subtly with torso
+pants shift at knees during poses
+cloth settles after transitions
+
+Again:
+
+few pixels.
+
+Tiny animation will sell the character much more effectively than huge movement.
+
+========================================================
+POSE TRANSITIONS
+========================================================
+
+This is one of the biggest required fixes.
+
+Current pose transitions are effectively sprite swaps.
+
+REMOVE that feeling.
+
+Every major pose change in the cinematic journey must have an actual transition.
+
+Do not require anatomically perfect complex yoga animation.
+
+But show believable motion between key poses.
+
+Use intermediate keyframes.
+
+Minimum expectation for major pose transitions:
+
+POSE A
+↓
+preparation frame
+↓
+movement frame 1
+↓
+movement frame 2
+↓
+movement frame 3
+↓
+arrival
+↓
+settle frame
+↓
+POSE B
+
+More frames may be used where necessary.
+
+At 8–12fps even 6–12 carefully designed frames can feel excellent.
+
+========================================================
+SCENE 1
+05:45 — THE PAUSE
+========================================================
+
+Character:
+
+seated meditation.
+
+Animate:
+
+- breathing
+- occasional blink
+- subtle hand/finger adjustment
+- slight head movement
+- tiny clothing movement
+
+Environment:
+
+- star twinkle variation
+- slow cloud movement
+- extremely gentle plant sway
+- lantern flicker
+- moon movement almost imperceptible
+
+Do not animate everything simultaneously.
+
+Use staggered environmental life.
+
+========================================================
+TRANSITION
+05:45 → 07:00
+========================================================
+
+DO NOT simply crossfade backgrounds.
+
+Create a real dawn transition.
+
+Animate:
+
+- sky hue gradually warms
+- stars individually fade
+- moon descends / fades
+- distant mountains receive warmer light
+- clouds move naturally
+- horizon brightens
+- lantern becomes less prominent
+- shadows change
+- plants receive warmer highlights
+
+Character should transition from meditation toward gentle morning movement.
+
+The change should feel continuous.
+
+========================================================
+SCENE 2
+07:00 — FIRST BREATH
+========================================================
+
+Character should actually perform a gentle breathing/stretch movement.
+
+Possible loop:
+
+hands resting
+→ inhale
+→ shoulders open slightly
+→ chest rises
+→ arms subtly open
+→ exhale
+→ return
+
+Do not make this theatrical.
+
+Add:
+
+- blink
+- breathing
+- tiny head response
+- hair response
+- clothing response
+
+Environment:
+
+- birds occasionally cross
+- leaves move
+- cloud layer drifts
+- sunlight slowly strengthens
+
+========================================================
+TRANSITION
+07:00 → 12:30
+========================================================
+
+Do not crossfade the instructor into another pose.
+
+Animate her physically toward the next state.
+
+The environment should also evolve continuously.
+
+Sun:
+
+changes position.
+
+Shadows:
+
+change direction/length.
+
+Sky:
+
+warms.
+
+Clouds:
+
+continue traveling rather than resetting.
+
+Plants:
+
+maintain spatial continuity.
+
+The visitor must believe this is the SAME PLACE later in the day.
+
+========================================================
+SCENE 3
+12:30 — YOUR OWN RHYTHM
+========================================================
+
+This scene needs actual yoga motion.
+
+Create a gentle pose animation.
+
+For example:
+
+starting position
+→ inhale
+→ arm movement
+→ torso stretch
+→ hold
+→ exhale
+→ controlled return
+
+The hold should still contain:
+
+- breathing
+- hair movement
+- tiny balance adjustment
+
+Human bodies are never completely frozen.
+
+Add tiny natural weight correction.
+
+========================================================
+SCENE 4
+18:15 — QUIET TRANSFORMATION
+========================================================
+
+Character performs a stronger pose.
+
+This is especially important.
+
+Avoid:
+
+POSE 1 PNG
+→ fade
+→ POSE 2 PNG.
+
+Instead:
+
+shift weight
+→ place foot
+→ adjust hips
+→ raise arms
+→ enter balance
+→ stabilize
+→ breathe
+
+During balance:
+
+add tiny natural corrective movement.
+
+Maybe 1–2px weight changes.
+
+Very subtle.
+
+This will make the character feel dramatically more alive.
+
+Sunset environment:
+
+- sun lowers
+- long shadows move
+- tree highlights warm
+- sky shifts through peach/rose/lavender
+- flowers move slightly
+- birds can return across horizon
+
+========================================================
+TRANSITION
+18:15 → NIGHT
+========================================================
+
+This should become one of the strongest moments on the website.
+
+Do NOT recolor the whole scene instantly.
+
+Create progressive dusk.
+
+Sequence:
+
+golden sunlight
+↓
+peach
+↓
+dusty rose
+↓
+lavender
+↓
+deep violet
+↓
+night
+
+Meanwhile:
+
+sun disappears behind mountains
+stars begin appearing individually
+moon gradually appears
+lantern turns on
+landscape loses saturation
+foreground becomes cooler
+distant mountains become silhouettes
+
+Character slowly returns toward meditation.
+
+========================================================
+SCENE 5
+22:30 — RETURN TO YOURSELF
+========================================================
+
+Character:
+
+meditation.
+
+High-quality breathing loop.
+
+After settling:
+
+create the subtle levitation signature.
+
+IMPORTANT:
+
+Do not move the entire image up/down mechanically.
+
+Animate:
+
+body begins becoming lighter
+shadow subtly softens
+body rises ~8–16px
+hair reacts slightly
+clothing reacts subtly
+nearby loose leaf can move
+body remains breathing
+
+Hold briefly.
+
+Slowly return.
+
+Use sophisticated easing.
+
+No glow aura.
+
+No particles exploding around her.
+
+No supernatural spectacle.
+
+The effect should feel poetic.
+
+========================================================
+LEVITATION PHYSICS
+========================================================
+
+Desired sequence:
+
+1. complete stillness
+2. slight inhale
+3. body begins rising
+4. shadow separates slightly
+5. body floats
+6. tiny natural vertical drift
+7. exhale
+8. slow descent
+9. contact/settle
+10. hair/clothing settle
+
+Duration:
+
+roughly 6–10 seconds for complete event.
+
+Do not loop continuously.
+
+Trigger occasionally or during the final scene.
+
+========================================================
+ENVIRONMENTAL ANIMATION SYSTEM
+========================================================
+
+The world needs secondary life.
+
+Implement reusable animation systems for:
+
+CLOUDS
+
+Different cloud groups at different speeds.
+
+Do not move every cloud together.
+
+Very slow.
+
+Some clouds should move behind mountains/trees.
+
+--------------------------------------------------------
+
+PLANTS
+
+Plants should not rotate as a rigid single image.
+
+If possible separate:
+
+- stem
+- major leaves
+- flower heads
+
+Use tiny staggered sway.
+
+Different plants should have slightly different timings.
+
+--------------------------------------------------------
+
+TREES
+
+Do not move entire tree trunks.
+
+Only animate:
+
+- canopy edge
+- small branch groups
+- highlights/leaves
+
+Trunk stays largely fixed.
+
+--------------------------------------------------------
+
+BIRDS
+
+Tiny distant birds.
+
+Use sparse appearances.
+
+Do NOT constantly spawn birds.
+
+A bird event every several seconds is enough.
+
+Use simple 2–4 frame flapping animation.
+
+--------------------------------------------------------
+
+STARS
+
+Do not blink every star simultaneously.
+
+Random/deterministic individual opacity changes.
+
+Very restrained.
+
+--------------------------------------------------------
+
+LANTERN
+
+Tiny flame/light flicker.
+
+Avoid obvious flashing.
+
+--------------------------------------------------------
+
+FLOWERS
+
+Tiny head movement in breeze.
+
+--------------------------------------------------------
+
+YOGA MAT
+
+Mostly static.
+
+During human movement it can react by 1px where physically sensible.
+
+Do not make the mat float.
+
+========================================================
+ANIMATION HIERARCHY
+========================================================
+
+Not everything should move equally.
+
+Use three levels.
+
+PRIMARY
+
+character movement
+
+SECONDARY
+
+hair
+clothing
+shadow
+nearby plant response
+
+TERTIARY
+
+clouds
+stars
+birds
+distant vegetation
+lighting
+
+The user should subconsciously perceive life.
+
+They should not consciously think:
+
+"everything is moving."
+
+========================================================
+NO SYNCHRONIZED LOOPS
+========================================================
+
+This is very important.
+
+Do not create:
+
+tree sway every 4s
++
+plant sway every 4s
++
+breathing every 4s
++
+cloud animation every 4s
+
+That creates robotic motion.
+
+Different systems need different durations.
+
+Example:
+
+breathing:
+5.4s
+
+plant A:
+6.7s
+
+plant B:
+8.2s
+
+hair:
+reactive + occasional 4.8s
+
+cloud:
+45s
+
+lantern:
+irregular
+
+blink:
+variable
+
+tree canopy:
+10.5s
+
+This produces natural motion.
+
+========================================================
+SCROLL + ANIMATION RELATIONSHIP
+========================================================
+
+Keep the existing scroll choreography where it works.
+
+Do NOT tie every internal animation directly to scroll progress.
+
+Important distinction:
+
+SCROLL controls:
+
+- camera/world progression
+- time-of-day progression
+- section position
+- scene transition
+
+TIME controls:
+
+- breathing
+- blinking
+- hair
+- plant sway
+- clouds
+- birds
+- lantern
+- idle movement
+
+This is critical.
+
+Otherwise the character freezes when the user stops scrolling.
+
+The world must remain alive while stationary.
+
+========================================================
+SCROLL SCRUBBING
+========================================================
+
+Major pose transitions may be partially scroll-driven.
+
+However:
+
+make the transition interpolate continuously.
+
+Do not use threshold logic like:
+
+if progress > 0.4:
+    show poseB
+
+That causes obvious sprite swapping.
+
+Instead:
+
+map progress continuously through a transition timeline.
+
+If using sprite frames:
+
+map progress through intermediate frames.
+
+If using layered SVG:
+
+interpolate joint transforms.
+
+========================================================
+PIXEL ART FRAME QUALITY
+========================================================
+
+If sprite sheets are used:
+
+Do NOT create huge amounts of meaningless frames.
+
+Quality > quantity.
+
+A strong animation can use:
+
+6
+8
+10
+12
+
+carefully designed frames.
+
+Maintain:
+
+- consistent silhouette
+- stable proportions
+- no pixel crawling
+- no random limb size changes
+- no changing face
+- no changing skin tone
+- no clothing flicker
+- no accidental anti-aliasing differences
+
+========================================================
+SERVICE SECTION ANIMATIONS
+========================================================
+
+The service section layout is APPROVED.
+
+Do NOT redesign it.
+
+Improve only its small pixel illustrations.
+
+REGULAR YOGA ICON
+
+Currently essentially static.
+
+Add:
+
+- tiny candle/steam/light movement if applicable
+- subtle ambient effect
+- very gentle object response
+
+PRENATAL
+
+Plant icon:
+
+- leaf sway
+- small growth/breath-like motion
+- subtle shadow movement
+
+POSTNATAL
+
+Moon/mat/lantern:
+
+- tiny star twinkle
+- moon subtle light shift
+- lantern flicker
+
+These should be elegant microanimations.
+
+Not GIF stickers.
+
+========================================================
+ABOUT GIRIJA IMAGE
+========================================================
+
+The About Girija composition is good.
+
+KEEP IT.
+
+But the scene currently looks like a static screenshot.
+
+Add:
+
+- breathing
+- occasional blink
+- slow cloud movement
+- stars
+- subtle plant movement
+- tiny lantern flicker
+- hair secondary motion
+
+Do NOT animate the entire image block.
+
+Animate components inside the scene.
+
+========================================================
+FOOTER
+========================================================
+
+The footer layout is good.
+
+KEEP IT.
+
+But its illustrated landscape currently looks like wallpaper.
+
+Animate:
+
+- moon
+- stars
+- tiny cloud drift
+- a few plants
+- lantern
+- Girija breathing
+- extremely subtle character idle movement
+
+Optional:
+
+one shooting star VERY occasionally.
+
+Do not repeat it every few seconds.
+
+No distracting footer spectacle.
+
+========================================================
+HOVER MICROANIMATIONS
+========================================================
+
+Buttons and navigation currently work.
+
+Keep existing behavior if good.
+
+You may refine:
+
+arrow translation
+underline draw
+1–2px lift
+background transition
+
+Do not introduce flashy interactions.
+
+========================================================
+PERFORMANCE
+========================================================
+
+Do not solve animation quality by loading massive GIF/video backgrounds.
+
+DO NOT use:
+
+- huge GIFs
+- giant MP4 backgrounds for every scene
+- 4K animated sequences
+- hundreds of sprite images
+- heavy Canvas if unnecessary
+
+Prefer:
+
+- SVG
+- CSS
+- GSAP
+- lightweight sprite sheets
+- transforms
+- opacity
+
+Target 60fps page rendering.
+
+Pixel animation can intentionally update at lower apparent frame rates.
+
+========================================================
+ANIMATION ARCHITECTURE
+========================================================
+
+Create maintainable animation utilities.
+
+Potential structure:
+
+animation/
+  character.ts
+  environment.ts
+  breathing.ts
+  dayCycle.ts
+  scrollJourney.ts
+
+or whatever fits existing architecture.
+
+Separate:
+
+SCROLL TIMELINES
+
+from
+
+IDLE/LOOPING TIMELINES.
+
+Do not put every animation inside one enormous GSAP timeline.
+
+Use gsap.context() where appropriate.
+
+Kill timelines / ScrollTriggers properly.
+
+Avoid duplicate animation instances after React remounts.
+
+========================================================
+REDUCED MOTION
+========================================================
+
+Respect prefers-reduced-motion.
+
+When enabled:
+
+keep:
+
+- minimal fades
+- static scenes
+
+Disable/reduce:
+
+- levitation
+- parallax
+- pose transitions
+- constant environment loops
+- extensive scroll-controlled animation
+
+========================================================
+VISUAL QA IS REQUIRED
+========================================================
+
+Do NOT consider the task complete because:
+
+npm run build
+
+passes.
+
+Start the application.
+
+Use browser/preview capabilities available to you.
+
+WATCH the animations.
+
+Do not merely take one screenshot.
+
+Observe the site over time.
+
+Observe:
+
+- breathing cycle
+- scene transitions
+- pose changes
+- sunset
+- night transition
+- levitation
+- plant movement
+- clouds
+- character settling
+
+If something looks mechanical:
+
+fix it.
+
+If a character appears to teleport:
+
+fix it.
+
+If a pose simply crossfades:
+
+fix it.
+
+If scenery feels dead:
+
+fix it.
+
+If everything moves simultaneously:
+
+fix it.
+
+If animation is too strong:
+
+reduce it.
+
+========================================================
+SPECIFIC FAILURE MODES TO REMOVE
+========================================================
+
+Search the code for patterns causing fake animation such as:
+
+opacity swaps between pose images
+
+conditional image changes based on scroll thresholds
+
+entire-scene PNG transforms
+
+simple scaleY breathing hacks
+
+large background-image crossfades
+
+instant sprite state changes
+
+hard-coded pose replacements
+
+If found, replace them where necessary with genuine layered/sprite animation.
+
+========================================================
+DO NOT TOUCH
+========================================================
+
+Unless absolutely necessary for animation integration, DO NOT CHANGE:
+
+- approved layout
+- typography system
+- hero wording
+- service wording
+- About wording
+- navigation structure
+- section ordering
+- overall color identity
+- existing responsive composition
+- contact information
+
+THIS TASK IS AN ANIMATION QUALITY PASS.
+
+NOT A SECOND WEBSITE REDESIGN.
+
+========================================================
+FINAL QUALITY TEST
+========================================================
+
+Watch each scene without scrolling for 10 seconds.
+
+Ask:
+
+Does the character still feel alive?
+
+YES required.
+
+Then slowly scroll through the day.
+
+Ask:
+
+Does it feel like the same person naturally moving through time?
+
+YES required.
+
+Does the character physically transition between poses rather than disappear/reappear?
+
+YES required.
+
+Does sunrise genuinely become daytime?
+
+YES required.
+
+Does afternoon genuinely become sunset?
+
+YES required.
+
+Does sunset genuinely become night?
+
+YES required.
+
+Does the environment have subtle independent movement?
+
+YES required.
+
+Does it still feel calm?
+
+YES required.
+
+Does anything feel like a game HUD?
+
+NO required.
+
+Does anything look like a GIF pasted into a website?
+
+NO required.
+
+Does any pose visibly teleport?
+
+NO required.
+
+========================================================
+FINAL EXECUTION INSTRUCTION
+========================================================
+
+Now inspect the existing implementation and PERFORM THIS ANIMATION REVAMP.
+
+Do not return a theoretical animation plan.
+
+Do not redesign the website.
+
+Do not rewrite approved content.
+
+Work directly on the codebase.
+
+Preserve the current strong layout.
+
+Replace weak fake animation with actual handcrafted pixel animation.
+
+Run the website.
+
+Watch the animation.
+
+Refine it.
+
+Run typecheck/build.
+
+Fix issues.
+
+Then inspect it again.
+
+Continue until the Vagartha pixel world genuinely feels alive.
+
+The target is:
+
+NOT MORE ANIMATION.
+
+BETTER ANIMATION.
+
+Every movement should have a reason.
+
+Every idle scene should breathe.
+
+Every pose transition should feel physically connected.
+
+Every time-of-day transition should feel continuous.
+
+Make the current beautiful website MOVE like it deserves to.

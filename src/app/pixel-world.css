@@ -1,0 +1,39 @@
+﻿.pixel-world {
+  position: absolute;
+  inset: 0;
+  isolation: isolate;
+  overflow: hidden;
+  pointer-events: none;
+  background: #e5dae1;
+}
+.pixel-world canvas {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+}
+.pixel-world canvas[data-layer="sky"] {
+  z-index: 0;
+}
+.pixel-world canvas[data-layer="landscape"] {
+  z-index: 1;
+}
+.pixel-world canvas[data-layer="architecture"] {
+  z-index: 2;
+}
+.pixel-world canvas[data-layer="life"] {
+  z-index: 3;
+}
+.pixel-world canvas[data-layer="foreground"] {
+  z-index: 4;
+}
+.pixel-world canvas[data-layer="atmosphere"] {
+  z-index: 5;
+}
+.world-fallback {
+  display: block;
+  padding: 30px;
+  font-family: var(--serif);
+}

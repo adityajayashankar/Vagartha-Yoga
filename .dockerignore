@@ -1,0 +1,12 @@
+node_modules
+.next
+.next-production
+out
+.git
+.env*
+!.env.example
+artifacts
+test-results
+*.tsbuildinfo
+assets/source
+docs
